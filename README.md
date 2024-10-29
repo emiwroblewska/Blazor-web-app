@@ -1,2 +1,2 @@
-# Blazor-web-app
-Basic web application implemented with .NET Blazor
+# Game Store
+Basic web application for an online game store implemented with .NET Blazor.
