@@ -1,5 +1,6 @@
 using GameStore.Api.Dtos;
 
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
@@ -18,6 +19,6 @@ app.MapPost("games", (CreateGameDto newGame) =>
     GameDto game = new(games.Count + 1, newGame.Name, newGame.Genre, newGame.Price, newGame.ReleaseDate);
     games.Add(game);    
     return Results.CreatedAtRoute("GetGame", new {id = game.Id});
-}
+});
 
 app.Run();
