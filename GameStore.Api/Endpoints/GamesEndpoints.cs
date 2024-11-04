@@ -19,7 +19,7 @@ public static class GamesEndpoints
         // GET /games
         group.MapGet("/", async (GameStoreContext dbcontext) => 
         {
-            await dbcontext.Games
+            return await dbcontext.Games
                 .Include(game => game.Genre)
                 .Select(game => game.ToGameSummaryDto())
                 .AsNoTracking()
